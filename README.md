@@ -24,3 +24,4 @@ go run main.go
 1. Open localhost:8080 in a browser.
 2. Upload a log file from the top left button
 3. Select a metric to view in the top right corner
+4. Mouseover the individual bars
