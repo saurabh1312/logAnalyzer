@@ -1,6 +1,6 @@
 # logAnalyzer
 
-##How to run
+## How to run
 
 ### If you are on a Mac
 
