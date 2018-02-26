@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Analyzer</title>
+
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/morris.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-light bg-light justify-content-between">
+            <form class="form-inline">
+                <label for="logFile">Log file</label>
+                <input type="file" class="form-control-file" id="logFile" onchange="loadFile()">
+            </form>
+            <h3>Log Analyzer</h3>
+            <form class="form-inline">
+                <select class="form-control" id="fieldSelect" onchange="loadGraphData()">
+                    <option value="">Select a field</option>
+                    <option value="url">URL Frequency</option>
+                    <option value="url_avg(responseTime)">URL Response Time</option>
+                    <option value="url_count(url)_api">API URL Frequency</option>
+                    <option value="url_avg(responseTime)_api">API URL Response Time</option>
+                    <option value="url_count(url)_assets">Assets URL Frequency</option>
+                    <option value="ipaddress">IP Address Frequency</option>
+                    <option value="date">Date Traffic</option>
+                    <option value="hour">Hour of Day Traffic</option>
+                </select>
+            </form>
+        </nav>
+
+        <div class="row" style="height: 600px;">
+            <div class="col" id="graph_div" style="height: 100%;"></div>
+        </div>
+    </div>
+
+    <script src="/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="/assets/js/umd/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/raphael-min.js"></script>
+    <script src="/assets/js/morris.min.js"></script>
+    <script src="/assets/js/analyzer.js"></script>
+</body>
+</html>
